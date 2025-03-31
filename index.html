@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Clone</title>
+    <link href="/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 60%, rgba(0,0,0,0.8) 100%);
+        }
+        .movie-card:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header class="fixed top-0 w-full z-50 bg-gradient-to-b from-black to-transparent p-4 flex justify-between items-center">
+        <div class="flex items-center">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="Netflix Logo" class="h-8">
+            <nav class="ml-8 hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#" class="hover:text-gray-300">Home</a></li>
+                    <li><a href="#" class="hover:text-gray-300">TV Shows</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Movies</a></li>
+                    <li><a href="#" class="hover:text-gray-300">New & Popular</a></li>
+                    <li><a href="#" class="hover:text-gray-300">My List</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="flex items-center space-x-4">
+            <div class="relative hidden md:block">
+                <input type="text" placeholder="Search" class="bg-black bg-opacity-50 border border-gray-600 rounded px-4 py-1 text-sm">
+            </div>
+            <a href="login.html" class="bg-red-600 hover:bg-red-700 px-3 py-1 rounded text-sm">Sign In</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen">
+        <div class="absolute inset-0 hero-gradient z-10"></div>
+        <img src="https://images.pexels.com/photos/3945317/pexels-photo-3945317.jpeg" alt="Featured Movie" class="w-full h-full object-cover">
+        <div class="absolute bottom-1/4 left-16 z-20 max-w-md">
+            <h1 class="text-5xl font-bold mb-4">Stranger Things</h1>
+            <p class="text-lg mb-6">When a young boy vanishes, a small town uncovers a mystery involving secret experiments, terrifying supernatural forces and one strange little girl.</p>
+            <div class="flex space-x-4">
+                <button class="bg-white text-black px-6 py-2 rounded flex items-center">
+                    <i class="fas fa-play mr-2"></i> Play
+                </button>
+                <button class="bg-gray-600 bg-opacity-70 px-6 py-2 rounded flex items-center">
+                    <i class="fas fa-info-circle mr-2"></i> More Info
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Movie Categories -->
+    <section class="p-8 mt-8">
+        <h2 class="text-2xl font-bold mb-4">Trending Now</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            <!-- Movie cards will be populated by JavaScript -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
